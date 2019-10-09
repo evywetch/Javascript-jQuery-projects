@@ -1,3 +1,3 @@
 # Javascript-jQuery-projects
 
-These projects are built with HTML, CSS, Javascript and jQuery
+These are practicing projects, built with HTML, CSS, Javascript and jQuery
