@@ -35,3 +35,35 @@ h1{
 	border: #666 solid 2px;
 	border-radius: 5px;
 }
+#slider img{
+	width: 980px;
+	height: 350px;
+}
+.slide{
+	position: absolute;
+}
+.slide-copy{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 20px;
+	background: 7f7f7f;
+	/* we add this coz we want to have an opacity. It will give a dark clear background for images*/
+	background: rgba(0,0,0,0.5);
+}
+#prev, #next{
+	width: 50px;
+	height: 50px;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	z-index: 10000;
+	background-color: white;
+
+}
+#prev{
+	margin-right: -45px;
+}
+#next{
+margin-right: -45px;
+}
