@@ -1,0 +1,10 @@
+Project description
+
+-> Complete Youtube video search script
+-> Use the Youtube Data API v3 ( so we can have youtube search engine all on our site)
+-> Animated search box ( when we click in the search box, it will extend. When we click out, it will shrink)
+-> We will use the channelList and searchList methods
+-> We will use the FancyBox plugin to open videos (We don't want the search engine to find the videos, and then have us click on them, then take us to youtube to watch them. We want them right on site)
+-> previous and next paging
+
+**** If interested in Youtube API, go to -> https://developers.google.com/youtube/v3 ****
