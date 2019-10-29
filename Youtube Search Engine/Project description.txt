@@ -7,5 +7,14 @@ Project description
 -> We will use the FancyBox plugin to open videos (We don't want the search engine to find the videos, and then have us click on them, then take us to youtube to watch them. We want them right on site)
 -> previous and next paging
 
-**** If interested in Youtube API, go to -> https://developers.google.com/youtube/v3 ****
+**** If interested in Youtube API, go to -> https://developers.google.com/youtube/v3/getting-started ****
+*****To get Youtube API key -> go to https://console.developers.google.com -> Credentials -> copy the key
+***** To add jquery to the project, have to make sure that you place jquery before script file ******
+
+What we need for setting up an app
+
+- css folder which contains css files
+-js folder which contains jQuery and js files
+- img folder contains images
+- Youtube API key
 
