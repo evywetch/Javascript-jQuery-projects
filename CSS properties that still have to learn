@@ -1,0 +1,22 @@
+ CSS properties that still have to learn
+
+ - text-decoration
+ - line-height
+ - position
+ -opacity
+ -box-sizing
+ -box-shadow
+ -cursor
+ -zoom
+ - -moz-box-sizing
+ - -webkit-box-sizing
+ - -moz-box-shadow
+ - -webkit-box-shadow
+ - background: transparent url(../img/search.png) top left no-repeat;
+
+
+ *** JQuery methods that have learned from this project
+
+ -animate()
+ -html()
+ -val()
