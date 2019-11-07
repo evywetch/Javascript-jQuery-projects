@@ -58,10 +58,48 @@ function search(){
 				var nextPageToken = data.nextPageToken;
 				var prevPageToken = data.prevPageToken;
 				console.log(data);
+
+// We will loop through all the video items that we get from the query
+				$.each(data.items, function(i,item){
+					// create html for each item
+					var output = getOutput(item);
+
+					// append each item to #results
+					$('#results').append(output);
+
+
+
+
+				})
 			}
-			
+
 
 		);
 
 
+}
+
+// Build Output
+function getOutput(item){
+	var videoId = item.id.videoId;  // ID is in id part
+	var title = item.snippet.title;  // title is in snippet part
+	var description = item.snippet.description;
+	var thumb = item.snippet.thumbnails.high.url;  // it will give a high quality thumbnail
+	var channelTitle = item.snippet.channelTitle;
+	var videoDate = item.snippet.publishedAt;
+
+	// Build output string
+	var output = '<li>' + 
+	'<div class="list-left">' + 
+	'<img src="' +thumb+ '">' +
+	'</div>' +
+	'<div class="list-right"' +
+	'<h3>' + title + '</h3>' +
+	'<small>By <span class="cTitle">'+channelTitle+'</span>on'+videoDate+'</small>' +
+	'<p>'+description+'</p>' +
+	'</div>' +
+	'</li>' +
+	'<div class="clearfix"></div>' +  // add the clearfix so we can clear any float
+	'';
+return output;
 }
