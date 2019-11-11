@@ -51,8 +51,12 @@ function search(){
 			part: 'snippet, id',
 			q: q,
 			type: 'video',
-			// To get this key, go to https://console.developers.google.com -> Credentials -> copy the key
-			key: 'AIzaSyAtWw029BEXs7g3KlteR5TfK6kxZgTJOx8'}, 
+			/* To get this key, go to https://console.developers.google.com !!!! Make sure to get the right key, otherwise it won't work 
+				and may get the exception in the console like :
+
+				"jquery-3.4.1.min.js:2 GET https://www.googleapis.com/youtube/v3/search?part=snippet%2C%20id&q=web%20design&type=video&key=AIzaSyAtWw029BEXs7g3KlteR5TfK6kxZgTJOx8 403"
+			*/
+			key: 'AIzaSyACKbKyRh_k9W1Ia6VxfFHIVxz4DCAPKBw'}, 
 			// "data" varaible will be getting from get request above
 			function(data){
 				var nextPageToken = data.nextPageToken;
@@ -67,16 +71,10 @@ function search(){
 					// append each item to #results
 					$('#results').append(output);
 
-
-
-
-				})
+				});
 			}
 
-
 		);
-
-
 }
 
 // Build Output
