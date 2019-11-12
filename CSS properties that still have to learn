@@ -13,6 +13,8 @@
  - -moz-box-shadow
  - -webkit-box-shadow
  - background: transparent url(../img/search.png) top left no-repeat;
+ - list-style
+ - overflow
 
 
  *** JQuery methods that have learned from this project
@@ -20,3 +22,9 @@
  -animate()
  -html()
  -val()
+
+
+
+
+
+

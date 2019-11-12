@@ -72,6 +72,10 @@ function search(){
 					$('#results').append(output);
 
 				});
+				var buttons = getButtons(prevPageToken, nextPageToken);
+				// Display buttons
+
+				$('#buttons').append(buttons);
 			}
 
 		);
@@ -93,11 +97,15 @@ function getOutput(item){
 	'</div>' +
 	'<div class="list-right"' +
 	'<h3>' + title + '</h3>' +
-	'<small>By <span class="cTitle">'+channelTitle+'</span>on'+videoDate+'</small>' +
+	'<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>' +
 	'<p>'+description+'</p>' +
 	'</div>' +
 	'</li>' +
 	'<div class="clearfix"></div>' +  // add the clearfix so we can clear any float
 	'';
 return output;
+}
+
+function getButtons(prevPageToken, nextPageToken){
+	
 }
