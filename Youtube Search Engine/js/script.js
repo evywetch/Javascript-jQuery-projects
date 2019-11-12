@@ -106,6 +106,19 @@ function getOutput(item){
 return output;
 }
 
+// Build the buttons
 function getButtons(prevPageToken, nextPageToken){
-	
+	if(!prevPageToken){
+		var btnoutput = '<div class="button-container">' +
+						'<button id="next-button" class="paging-button" data-token="'+nextPageToken+'" data-query="' + q + '"' +
+						'onclick="nextPage();">Next Page</button></div>';
+	} else {
+		var btnoutput = '<div class="button-container">' +
+						'<button id="next-button" class="paging-button" data-token="'+prevPageToken+'" data-query="' + q + '"' +
+						'onclick="prevPage();">Prev Page</button>' +
+						'<button id="next-button" class="paging-button" data-token="'+nextPageToken+'" data-query="' + q + '"' +
+						'onclick="nextPage();">Next Page</button></div>';
+	}
+
+	return btnoutput;
 }

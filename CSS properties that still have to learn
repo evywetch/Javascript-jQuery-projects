@@ -15,6 +15,7 @@
  - background: transparent url(../img/search.png) top left no-repeat;
  - list-style
  - overflow
+ - cursor
 
 
  *** JQuery methods that have learned from this project
