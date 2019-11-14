@@ -81,6 +81,101 @@ function search(){
 		);
 }
 
+function nextPage(){
+
+// .data('token') will grab the token from attribute data-token
+// U dont have to do .data('data-token'), only do .data('token') it will understand as data-token
+	var token = $('#next-button').data('token');
+	var q = $('#next-button').data('query');
+	// Clear results
+	$('#results').html('');
+	$('#buttons').html('');
+
+	// Get form input
+	q = $('#query').val();   
+ 
+	// Run get request on API
+
+	$.get(
+		
+		"https://www.googleapis.com/youtube/v3/search",{
+			part: 'snippet, id',
+			q: q,
+			type: 'video',
+			// add additional option here
+			pageToken: token,
+			
+			key: 'AIzaSyACKbKyRh_k9W1Ia6VxfFHIVxz4DCAPKBw'}, 
+			
+			function(data){
+				var nextPageToken = data.nextPageToken;
+				var prevPageToken = data.prevPageToken;
+				console.log(data);
+
+
+				$.each(data.items, function(i,item){
+					
+					var output = getOutput(item);
+
+					
+					$('#results').append(output);
+
+				});
+				var buttons = getButtons(prevPageToken, nextPageToken);
+				
+				$('#buttons').append(buttons);
+			}
+
+		);
+}
+
+function prevPage(){
+
+// .data('token') will grab the token from attribute data-token
+// U dont have to do .data('data-token'), only do .data('token') it will understand as data-token
+	var token = $('#prev-button').data('token');
+	var q = $('#prev-button').data('query');
+	// Clear results
+	$('#results').html('');
+	$('#buttons').html('');
+
+	// Get form input
+	q = $('#query').val();   
+ 
+	// Run get request on API
+
+	$.get(
+		
+		"https://www.googleapis.com/youtube/v3/search",{
+			part: 'snippet, id',
+			q: q,
+			type: 'video',
+			// add additional option here
+			pageToken: token,
+			
+			key: 'AIzaSyACKbKyRh_k9W1Ia6VxfFHIVxz4DCAPKBw'}, 
+			
+			function(data){
+				var nextPageToken = data.nextPageToken;
+				var prevPageToken = data.prevPageToken;
+				console.log(data);
+
+
+				$.each(data.items, function(i,item){
+					
+					var output = getOutput(item);
+
+					
+					$('#results').append(output);
+
+				});
+				var buttons = getButtons(prevPageToken, nextPageToken);
+				
+				$('#buttons').append(buttons);
+			}
+
+		);
+}
 // Build Output
 function getOutput(item){
 	var videoId = item.id.videoId;  // ID is in id part
@@ -95,8 +190,8 @@ function getOutput(item){
 	'<div class="list-left">' + 
 	'<img src="' +thumb+ '">' +
 	'</div>' +
-	'<div class="list-right"' +
-	'<h3>' + title + '</h3>' +
+	'<div class="list-right">' +
+	'<h3><a class="fancybox fancybox.iframe" href="http://www.youtube.com/embed/'+videoId+'">'+title+'</a></h3>' +
 	'<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>' +
 	'<p>'+description+'</p>' +
 	'</div>' +
@@ -114,7 +209,7 @@ function getButtons(prevPageToken, nextPageToken){
 						'onclick="nextPage();">Next Page</button></div>';
 	} else {
 		var btnoutput = '<div class="button-container">' +
-						'<button id="next-button" class="paging-button" data-token="'+prevPageToken+'" data-query="' + q + '"' +
+						'<button id="prev-button" class="paging-button" data-token="'+prevPageToken+'" data-query="' + q + '"' +
 						'onclick="prevPage();">Prev Page</button>' +
 						'<button id="next-button" class="paging-button" data-token="'+nextPageToken+'" data-query="' + q + '"' +
 						'onclick="nextPage();">Next Page</button></div>';

@@ -9,12 +9,40 @@ Project description
 
 **** If interested in Youtube API, go to -> https://developers.google.com/youtube/v3/getting-started ****
 *****To get Youtube API key -> go to https://console.developers.google.com -> Credentials -> copy the key
-***** To add jquery to the project, have to make sure that you place jquery before script file ******
+*****************To add jquery to the project, have to make sure that you place jquery before/above script file ******************
 
-What we need for setting up an app
-
+ >>>>>>> What we need for setting up and download for an app
 - css folder which contains css files
 -js folder which contains jQuery and js files
 - img folder contains images
-- Youtube API key
 
+
+>>>>>>> What we have to download or get from internet
+- Youtube API key
+- jQuery file
+- Lightbox (to be able to watch the video in the box), have to download it. Lightbox will be compatable with old version jquery like 1 or 2. 
+  And in this project, I use old Lightbox version as well(copy from the instructor), the new version didnt work.
+	- If want to download Lightbox >> go to fancybox.net >> then go to http://ancyapps.com >> then click download 
+	- In this case I copy all the Lighbox files from the instructor as follows:
+		- In css folder add: jquery.fancybox.css, jquery.fancybox-thumbs.css , jquery.fancybox-buttons.css
+		- In js folder add: jquery.fancybox.pack.js, jquery.fancybox-thumbs.js, jquery.fancybox-media.js, jquery.fancybox-buttons.js
+
+
+>>>>>>>> Why do I have to put all my script tags at the end of body tag?
+- It is a best practice to put JavaScript <script> tags just before the closing </body> tag rather than in the <head> section of your HTML.
+
+The reason for this is that HTML loads from top to bottom. The head loads first, then the body, and then everything inside the body. If we put our JavaScript links in the head section, the entire JavaScript file will load before loading any of the HTML, which could cause a few problems.
+
+If you have code in your JavaScript that alters HTML as soon as the JavaScript file loads, there won't actually be any HTML elements available for it to affect yet, so it will seem as though the JavaScript code isn't working, and you may get errors.
+
+If you have a lot of JavaScript, it can visibly slow the loading of your page because it loads all of the JavaScript before it loads any of the HTML.
+
+When you place your JavaScript links at the bottom of your HTML body, it gives the HTML time to load before any of the JavaScript loads, which can prevent errors, and speed up website response time.
+
+One more thing: While it is best to include your Javascript at the end of your HTML <body>, putting your Javascript in the <head> of your HTML doesn't ALWAYS cause errors. When using jQuery, it is common to put all of your code inside a "document ready" function:
+
+$("document").ready(function(){
+// your code here
+});
+
+This function basically says, don't run any of the code inside until the document is ready, or fully loaded. This will prevent any errors, but it can still slow down the loading time of your HTML, which is why it is still best to include the script after all of the HTML.

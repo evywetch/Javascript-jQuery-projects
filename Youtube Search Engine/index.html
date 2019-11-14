@@ -3,7 +3,9 @@
 <head>
 	<title>SearchVidz</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!-- Have to make sure to place jquery before js files -->
+	<!-- Add this css to be able to use Lightbox(fancybox) -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">  
+	
 	
 </head>
 <body>
@@ -28,8 +30,27 @@
 		</footer>
 		
 	</div>
-	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<!-- Have to make sure to place jquery before js files -->
+	<!--<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>     this is new version jQuery-->
+
+	<!-- !!!!! Have to change jQuery to older version because Fancybox is not compatable with the new version; according to this link https://www.wysiwygwebbuilder.com/forum/viewtopic.php?t=80131  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  
+
 	<script type="text/javascript" src="js/script.js"></script>
+	<!-- Add this js to be able to use Lightbox(fancybox) -->
+	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+							
+	<script>
+									// We need to call the fancybox plugin
+
+			$(document).ready(function(){
+				// the .fancybox will call the fancybox plugin
+				$('.fancybox').fancybox();
+
+			});
+
+	</script>
+
 <!--	<script src="https://apis.google.com/js/api.js"></script>  // Adding this script to be able to like to the Youtube API -->
 
 </body>
