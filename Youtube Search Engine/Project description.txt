@@ -10,6 +10,7 @@ Project description
 **** If interested in Youtube API, go to -> https://developers.google.com/youtube/v3/getting-started ****
 *****To get Youtube API key -> go to https://console.developers.google.com -> Credentials -> copy the key
 *****************To add jquery to the project, have to make sure that you place jquery before/above script file ******************
+****** onsubmit : has key word "return + function()"  ; onclick : no keyword "return" has only function()
 
  >>>>>>> What we need for setting up and download for an app
 - css folder which contains css files

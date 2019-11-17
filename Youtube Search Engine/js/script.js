@@ -4,7 +4,7 @@ $(function() {
 	var searchField = $("#query");
 	var  icon = $("#search-btn");
 
-	// Focus Event Handler
+	// Focus Event Handler, will extend when u type in the search box
 	$(searchField).on('focus', function(){
 		$(this).animate({
 			width:'100%'
@@ -14,7 +14,7 @@ $(function() {
 		},400);
 	});
 
-	// Blur Event Handler
+	// Blur Event Handler, will shrink when there is no typing in the search box
 	$(searchField).on('blur', function(){
 		if(searchField.val() == ''){
 			$(searchField).animate({
@@ -35,6 +35,7 @@ $(function() {
 
 });
 
+// this method will be called when u click search icon or enter, it's called from the form
 function search(){
 	// Clear results
 	$('#results').html('');
