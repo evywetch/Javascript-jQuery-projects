@@ -9,7 +9,7 @@ Project Description
 What you'll learn
 -> jQuery next(), siblings(), children()
 -> slideUp(), slideDown() and slideToggle()
--> Using jQuery and CSS to retate an image
+-> Using jQuery and CSS to rotate an image
 
 
 *********** If go to jqueryui.com , there are a lot of pre made widgets that we can use ex. Accordian, Autocomplete. If we want to use it, we have to include jquery ui file or can can link to the CDN ***************

@@ -16,6 +16,9 @@
  - list-style
  - overflow
  - cursor
+- em unit
+- list-style
+- display
 
 
  *** JQuery methods that have learned from this project
