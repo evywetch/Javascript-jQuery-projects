@@ -1,8 +1,8 @@
  CSS properties that still have to learn
 
- - text-decoration
- - line-height
- - position
+ - text-decoration  >>> ex. underline, overline, line-through
+ - line-height		>>> set the height of the line
+ - position			>>> ** position : sticky; is interesting
  -opacity
  -box-sizing
  -box-shadow

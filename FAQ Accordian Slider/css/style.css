@@ -40,12 +40,17 @@ h1{
 }
 .faq li.a{
 	background: #ddd;
-	display: none;  /* it won't be displayed on the screen */
+	display: none;  /* it won't be displayed on the screen. ****** This is an important trick to make answer only be displayed when we click the arrow */
+}
+
+.rotate{
+	-moz-transform:rotate(90deg);  /* rotate 90 degree  */
+	-webkit-transform:rotate(90deg);
+	transform:rotate(90deg);
 }
 @media(max-width: 800px){
 
 	#container {
 		width: 90%;
 	}
-
 }

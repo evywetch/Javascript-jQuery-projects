@@ -7,7 +7,7 @@ Project Description
 
 
 What you'll learn
--> jQuery next(), siblings(), children()
+-> jQuery next(), siblings(), children(), not()
 -> slideUp(), slideDown() and slideToggle()
 -> Using jQuery and CSS to rotate an image
 
