@@ -8,9 +8,9 @@
  -box-shadow
  -cursor
  -zoom
- - -moz-box-sizing
- - -webkit-box-sizing
- - -moz-box-shadow
+ - -moz-box-sizing		>>> -moz- (Firefox)
+ - -webkit-box-sizing   >>> A developer will place -webkit- followed by some code, meaning that the code will only run on Chrome, Safari, Opera and iOS browsers.
+ - -moz-box-shadow		>>> -moz- (Firefox)
  - -webkit-box-shadow
  - background: transparent url(../img/search.png) top left no-repeat;
  - list-style
@@ -26,6 +26,7 @@
  -animate()
  -html()
  -val()
+ - not()
 
 
 
