@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Events</title>
+	<script type="text/javascript" src="lib/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+	<h1>jQuery Events</h1>
+
+	<button>don't click me</button>
+	<button>seriously don't click me</button>
+	<button>this is your last warning</button>
+
+	<script type="text/javascript">
+
+// if click on any button, that button will have background color as pink
+$("button").click(function() {
+	// $(this) refers to $("button")
+	$(this).css("background","pink");
+});
+
+// if click on any button, u'll get the button text
+$("button").click(function() {
+	var text = $(this).text();
+
+	console.log("You clicked " + text);
+
+});
+
+	</script>
+
+</body>
+</html>

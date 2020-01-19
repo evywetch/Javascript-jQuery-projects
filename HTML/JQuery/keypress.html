@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keypress Method</title>
+	<script type="text/javascript" src="lib/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+	<h1>jQuery Events</h1>
+		<input type="text" name="">
+			<button>don't click me</button>
+			<button>seriously don't click me</button>
+			<button>this is your last warning</button>
+
+	<script type="text/javascript">
+
+// any time that u press any keyboard key, it will call function(call back function)
+$("input").keypress(function() {
+console.log("You pressed a key!");
+});
+
+// if user hit enter, it will alert -- everytime user press key, it will create event object
+// event object contain info that what each key refer to what number, enter key = 13
+$("input").keypress(function(event) {
+	if(event.which === 13) {
+		alert("YOU HIT ENTER!");
+	}
+});
+
+	</script>
+
+</body>
+</html>

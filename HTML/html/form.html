@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- Form is a container of the related inputs, once we submit the form, all inputs will be submited and transfred
+
+Form attributes:
+action = where the form send data to, if u don't specify action, it will send data to current place where u are
+		(file:///C:/Users/evy/Documents/HTML/form.html?) = we making a request
+method = what HTTP method, if u don't specify method, its going to be a "GET" request
+
+Input attributes:
+name = the name of data we want to send, so that we can then retrieve them later
+
+	-->
+	<h1>Login</h1>
+	<!--  
+<form>
+	<label>Username<input name="username" type="text" placeholder="username"></label>
+	<label>Password<input name="password" type="password" placeholder="password"></label>
+	 <button>Submit</button> 
+	<input type="submit">
+</form>
+-->
+
+<form>
+	<label for="username">Username</label>
+	<input id="username" name="username" type="text" placeholder="username">
+	<label for="password">Password</label>
+	<input id="password" name="password" type="password" placeholder="password">
+	<input type="submit">
+</form>
+
+</body>
+</html>

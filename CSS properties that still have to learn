@@ -19,6 +19,7 @@
 - em unit
 - list-style
 - display
+- height: 100vh;  // what is unit vh?
 
 
  *** JQuery methods that have learned from this project
@@ -27,6 +28,7 @@
  -html()
  -val()
  - not()
+
 
 
 
