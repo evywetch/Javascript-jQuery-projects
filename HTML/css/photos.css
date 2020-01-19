@@ -1,0 +1,73 @@
+<c:if test="${dataPointGroups ne null}">
+
+	<div class="modal-body" id="modalBody">
+	<c:set var="hasGraphs" value="${false}" />
+	<c:forEach items="${dataPointGroups}" var="dataPointGroup"
+		varStatus="foreach">
+		<c:if test="${dataPointGroup.dataPoints.size() > 0}">
+			<c:set var="hasGraphs" value="${true}" />
+			<div class="row">
+			
+				<div class="col-lg-9">
+					<div id="statistic_graph${foreach.index}"
+						style="min-width: 200px; height: 250px; margin: 0 auto"></div>
+					<script>
+					$(function () {
+					    $('#statistic_graph${foreach.index}').highcharts({
+					        chart: {
+					        	type: 'column'
+					        },
+					        title: {
+					            text: '${dataPointGroup.name}'
+					        },
+					        xAxis: {
+					            type: 'datetime',
+					            labels: {
+					            	autoRotation: true
+					            },
+					            <!--  this makes tick interval per 1 month unit
+					            units: [
+					                [
+					                  'month', [1]
+					                ]
+					              ]
+					            -->
+					        },
+					        yAxis: {
+					            title: {
+					                text: 'Waarden'
+					            }
+					        },
+					        plotOptions: {
+					            column: {
+					                pointPadding: 0.2,
+					                borderWidth: 1,
+					                pointWidth: 20
+					                
+					            },
+					        	series: {
+					         		pointIntervalUnit: 'month' 
+					       		}
+					        },
+					        credits: {
+					        	enabled: false
+					        },
+					        series: [{
+					        	name: 'Statistics',
+					        	dataLabels: {
+					                align: 'left',
+					                enabled: true
+					            },
+					            data: [
+									<c:forEach items="${dataPointGroup.dataPoints}" var="dataPoint" varStatus="foreach">
+									<c:if test="${foreach.index ne 0}">,</c:if>[${dataPoint.longDate},${dataPoint.size}]
+									</c:forEach>
+					                   ]
+					        }]
+					    });
+					});					
+					</script>
+				</div>
+			</div>
+		</c:if>
+	</c:forEach>

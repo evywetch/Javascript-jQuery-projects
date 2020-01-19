@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Grid System</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<style type="text/css">
+		.pink {
+			background: pink;
+			border: 1px solid purple;
+		}
+		.orange {
+			background: orange;
+			border: 1px dashed red;
+		}
+
+	</style>
+</head>
+<body>
+	<!--================================================== -->
+	<!-- 					OBJECTIVES					   -->
+	<!-- 1. Understand Purpose of Grid System			   -->
+	<!-- 2. Understand the 4 different sizes			   -->
+	<!-- 3. Write nested Grids							   -->
+	<!--================================================== -->
+
+<!-- to use grid system(col-lg), hv to put elements in container or row -->
+	<div class="container">
+		<!-- <div class="row">
+				Adding  col-md-2 means, when this grid is set up to medium size(iPad screen) 
+				we want them each to take up 2 units
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+			<div class="col-lg-1 col-md-2 pink">COL LG 1</div>
+		</div>
+-->
+
+
+		 <div class="row">
+		 	<!--In this case, we dont add col-lg, we just set col-md-3, bootstrap will know and take what we set for meduim and apply it to large --> 
+		 	<!--Adding col-md-3 means, when this grid is set up to medium size, went them each to take up 3 units -->
+		 	<!--Adding col-sm-6 means, when this grid is set up to small size, went them each to take up 6 units -->
+			<div class=" col-md-3 col-sm-6  pink">
+				<div class="row">
+					<div class="col-lg-6 orange">FIRST HALF</div>
+					<div class="col-lg-6 orange">SECONG HALF</div>
+				</div>
+			</div>
+			<div class=" col-md-3 col-sm-6  pink">TOUR DATE!!</div>
+			<div class=" col-md-3 col-sm-6  pink">TOUR DATE!!</div>
+			<div class=" col-md-3 col-sm-6  pink">TOUR DATE!!</div>
+		</div> 
+	</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+p {
+	/* Content - Width and Height */
+width: 200px;
+/* height: 300px; */
+
+
+	/* Border */
+border: 2px solid blue;
+
+
+	/* Padding */
+padding-left: 40px;
+
+
+	/* Margin */
+/*margin-top: 50px;*/
+/* margin: 0 auto 0 auto;   setting margin-left, margin-right = auto, it will center the content */
+margin: 0 auto; /* means top, bottom = 0  : left, right = auto;
+}

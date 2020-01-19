@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Voorbereiding op uw poli-afspraak</title>
+        <style type="text/css">
+        body {margin: 0; padding: 0; min-width: 100%!important; }
+        .content {width: 100%; 
+            max-width: 600px;}  
+        .action-btn:hover{
+                background-color:#099ad1!important;
+            }  
+            a{
+                text-decoration: none;
+            }
+            a:hover{
+                text-decoration: underline!important;
+               
+            }
+            .four-cell ul{
+                padding:0px
+            }
+            .four-cell td{ 
+                background:#fff;
+                display: inline-block;
+                width:100%;
+                box-sizing: border-box;
+                text-align:left;
+                vertical-align: bottom; 
+            }
+            .four-cell td ul li{
+                list-style-type: none;
+            }
+            .four-cell td .nr{
+                width:10px;height:10px;border-radius:30px;text-align:center;display:inline-block; margin:0px 10px 10px;background-color:#0DB2F0;color:#fff;padding:10px;line-height: 0.7;
+            }
+        </style>
+    </head>
+    <body bgcolor="#ffffff" style="font-family: sans-serif; color:#888;line-height: 1.4">
+        <table width="100%" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <table class="content" align="center" cellpadding="0" cellspacing="0"  bgcolor="#fff" >
+                        <tr>
+                            <td>
+                                <img src="$baseUrl$organisation.logo" alt="logo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0px 20px 0px 20px; border-top:solid 1px #ccc" >
+                                <p>Beste $patient.displayName,</p>
+                                
+                                <p><strong>#if($reminder)HERINNERING: #end U heeft #if($invitation.consult.consultationDate)op $dateTool.format("dd-MM-yyyy", $invitation.consult.consultationDate) om $dateTool.format("HH:mm", $invitation.consult.consultationDate)#{else}binnenkort#end een afspraak met uw arts bij het $organisation.name. Om u beter te kunnen helpen, verzoeken wij u een vragenlijst over uw gezondheidsklachten in te vullen.</strong> </p>
+                                <p>De vragenlijst helpt u bij het voorbereiden op de afspraak. De arts bekijkt uw antwoorden voor of tijdens de afspraak. Uw antwoorden vormen de basis van het gesprek. Zo is er tijdens het gesprek meer tijd voor andere vragen, bijvoorbeeld over uw behandeling.</p>
+                                <p>Vul deze vragenlijst voor uw afspraak in. U maakt eerst een account aan; het invullen duurt 10 tot 15 minuten. Alvast bedankt!</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:20px 20px 20px 0px; border-bottom:solid 1px #cccccc" >
+                               <a href="$baseUrl/uitnodiging/$invitation.id" style="background-color:#0DB2F0;;  color: white; display: inline-block; font-size: 16px; margin-left: 20px; padding: 10px 20px; text-align: center; text-decoration: none;">Start de vragenlijst</a>
+                            </td>
+                        </tr>                        
+                    </table>
+                    <table class="content" align="center" cellpadding="0" cellspacing="0"  bgcolor="#fff" >
+                        <tr>
+                            <td style="padding:20px; border-bottom:solid 1px #ccc"">
+                            <p>Het invullen van de vragenlijst is niet verplicht. Wilt u de vragenlijst niet invullen en ook geen uitnodigingen meer ontvangen van ConsultAssistent? U kunt zich via deze <a href="$baseUrl/afmelden/$invitation.id" title="Afmelden">link</a> afmelden.<br/>
+	                        Neem bij vragen of bij problemen bij het inloggen contact op met het $organisation.name op tel. nr: $organisation.phoneNumber.</p>
+                            </td>
+                        </tr>                    
+                        <tr>
+                            <td style="font-size:10px; padding:20px">
+                                E-mail disclaimer<br>
+                                Dit e-mailbericht is uitsluitend bestemd voor de geadresseerde(n). Indien de e-mail bij vergissing bij u terecht is gekomen, wilt u ons dan direct informeren via <a href="mailto:info@consultassistent.nl">info@consultassistent.nl</a>? Wij verzoeken u in dat geval de e-mail te vernietigen, de inhoud ervan niet te gebruiken en niet onder derden te verspreiden. Aan dit bericht kunnen geen rechten worden ontleend. ConsultAssistent is een product van Outcome Measurement. Outcome Measurement B.V. is niet aansprakelijk voor de schade ten gevolge van het gebruik van elektronische communicatie en staat ingeschreven bij de Kamer van Koophandel onder nummer 65972902.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

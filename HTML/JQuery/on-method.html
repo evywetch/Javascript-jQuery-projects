@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On Method</title>
+	<script type="text/javascript" src="lib/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+	<h1>jQuery Events</h1>
+	<h1>jQuery Events</h1>
+	<h1>jQuery Events</h1>
+		<input type="text" name="">
+			<button>don't click me</button>
+			<button>seriously don't click me</button>
+			<button>this is your last warning</button>
+
+	<script type="text/javascript">
+
+/*
+// if click on any h1, all h1 will be purple
+$("h1").on('click', function() {
+	$("h1").css("color", "purple");
+});
+
+*/
+
+// if u click which h1
+$("h1").on('click', function() {
+
+	// only that h1 will turn purple -- $(this) = $("h1")
+	$(this).css("color", "purple");
+});
+
+
+$("input").on("keypress", function() {
+	console.log("Keypressed!");
+});
+
+
+// if we do mouse hover on any button, that button will be bold
+
+$("button").on("mouseenter", function() {
+$(this).css("font-weight", "bold");
+});
+
+// if the mouse leaves, text will be normal
+
+$("button").on("mouseleave", function() {
+$(this).css("font-weight", "normal");
+});
+
+	</script>
+
+</body>
+</html>

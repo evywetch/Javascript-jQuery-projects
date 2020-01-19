@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Method</title>
+	<script type="text/javascript" src="lib/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<h1>jQuery Methods Demo Page</h1>
+	<input type="text" name="" placeholder="your name">
+	<ul>
+		<li>Skittles</li>
+		<li>Starburst</li>
+		<li>Twix</li>
+
+	</ul>
+
+</body>
+</html>
+
+<!-- 
+											There are many jQuery methods, but we will learn these methods
+
+-> val()
+->text()
+->attr()
+->html()
+->addClass()
+->removeClass()
+->toggleClass()
+
+
+
+##################### Can find documentation about these methods in api.jquery.com  #########################
+
+
+											text() -- coresponse to text
+
+Ex 1.  $("h1").text()  = " jQuery Methods Demo Page "
+
+Ex 2. $("ul").text()   =  "Skittles Starburst Twix"
+
+Ex 3. $("li").text()	= "SkittlesStarburstTwix"  // it will return all the texts in li and return in one string
+
+Ex 4. $("h1").text("New Text!")  // this will change the text in h1
+
+Ex 5. $("li").text("Rusty")  // this will change all li text to be "Rusty"
+
+												html() -- coresponse to inner html
+
+Ex 1. $("ul").html();  // u will retrieve inner html of "ul" which are all "li"
+ "<li>Skittles</li> <li>Starburst</li> <li>Twix</li>"
+
+Ex 2. $("ul").html("<li>I hacked ur UL!</li><li>Woffey</li>");  // this will update ur ul to have only li and have text as we set
+
+Ex 3. $('li').html("<a href='google.com'>Click go to Google</a>");  // it will change all li to be this link  *** have to use '' with href coz cant use "" inside ""
+
+ -->

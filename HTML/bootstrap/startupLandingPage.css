@@ -1,0 +1,38 @@
+body {
+	background: url(https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+	background-size: cover; /* this will resize the back ground to be smaller to fit the page size, but it still not definitelt perfect */
+	background-position: center;
+	font-family: Lato;
+	/* this white color won't effect elements that use bootstrap class coz bootstrap class will over-written it */
+	color: white;
+
+
+}
+
+html {
+	/* this will make the background picture take the whole screen */
+	/* it will take up 100% of the container which is just the entire document window */
+	height: 100%;
+}
+
+#content {
+	text-align: center;
+	padding-top: 25%;
+	/*x-offset, y-offset, blur radius, color */
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+				0px 8px 13px rgba(0,0,0,0.1),
+				0px 18px 23px rgba(0,0,0,0.1);
+}
+
+h1 {
+	font-weight: 700;
+	/* means 5 times bigget than the parent */
+	font-size: 5em;
+}
+
+hr {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+

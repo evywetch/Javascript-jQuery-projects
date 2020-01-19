@@ -1,0 +1,81 @@
+
+												NOTE about click(), keypress(), on()
+
+				click() -- is a quick and easy way to add a click listener to elements
+
+ex1. // prints when item with id 'submit' is clicked
+
+$("#submit").click(function() {
+	console.log("Another click");
+});
+
+
+ex2. // alerts when ANY button is clicked
+
+$("button").click(function() {
+	alert("Someone clicked a button");
+});
+
+ex3. // if u click on h1, u'll get an alert
+
+$("h1").click(function() {
+	alert("U clicked");
+});
+
+ex4. // if click on any button, that button will have background color as pink
+
+$("button").click(function() {
+// $(this) refers to $("button")
+	$(this).css("background","pink");
+})
+
+					keypress() -- is a quick and easy way to add a keypress listener to elements -- it will trigger when the user type sth on the keyboard
+
+ex1. // listen to any keypress in any text input
+
+$('input[type="text"]').keypress(function() {
+	alert("text input keypress!");
+});(
+)
+
+					on() -- works similarly to addEventListener. It lets you specify the type of event to listen for
+						 -- It's not just for click events. on() supports all types of events
+
+ex1. // prints when items with id 'submit' is clicked
+
+$('#submit').on('click', function() {
+	console.log("Another click");
+});
+
+ex2. // alert when any button  is clicked
+
+$('button').on('click', function() {
+	alert("button clicked");
+});
+
+ex3. // double click event
+
+$('button').on('dbclick', function() {
+	alert("DOUBLE CLICKED!");
+})
+
+ex4. // drag start event
+
+$('a').on('dragstart', function() {
+	console.log(" DRAG STARTED!");
+});
+
+ex5. // keypress event
+
+$('input[type="text"').on('keypress', function() {
+	alert("key pressed!");
+});
+
+
+					Why use on()?
+
+-> In  ost cases, click() and on('click') will both get the job done. HOWEVER, there is one key different
+
+- click() only adds click listener for elements that are on that page at that time
+- on() will add listeners for all potential future elements for example what user type into the form or hit enter
+
